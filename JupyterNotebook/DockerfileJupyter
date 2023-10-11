@@ -1,0 +1,14 @@
+FROM jupyter/pyspark-notebook
+
+# Change to root user to install java 8
+USER root
+
+# Install requirements
+# COPY requirements.txt ./
+# RUN pip3 install -r requirements.txt
+
+# RUN rm -rf requirements.txt
+
+EXPOSE 8088 8042 4040
+
+USER $NB_UID
